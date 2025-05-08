@@ -1,0 +1,45 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    background-color: hsl(250, 24%, 19%);
+    color: #fff;
+    scrollbar-width: none; /*firefox support */    
+}
+
+/* Defines the width and alignment of the overall donation*/
+#donation-container {
+    width: 600px;
+    text-align: center;
+}
+
+/* Flexbox that contains the username, bits, and filler text */
+.donation-text {
+    font-size: 31px;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 1px #000, 0px 0px 2px #000, 0px 0px 3px #000, 0px 0px 4px #000, 0px 0px 5px #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1px; /* gap between each of the elements in the flexbox */
+}
+
+.username {
+    margin-right: 4px;
+}
+
+.username, .bits {
+    font-size: 35px;
+    text-shadow: 0px 0px 1px #000, 0px 0px 2px #000, 0px 0px 3px #000, 0px 0px 4px #000, 0px 0px 5px #000;
+    display: flex;
+}
+
+/* Applies to each individual letter of the username and bits strings */
+.letter {
+    color: rgb(0, 255, 255);
+}
+
+.message-text {
+    font-size: 26px;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 1px #000, 0px 0px 2px #000, 0px 0px 3px #000, 0px 0px 4px #000, 0px 0px 5px #000;
+    margin-top: 4px;
+}

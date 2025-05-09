@@ -4,7 +4,7 @@ import threading
 import logging
 from rich import print
 
-SOCIAL_CREDIT_FILE = r"E:\Dropbox\Livestream Assets\Web Apps\Cheers - Social Credit TTS\SOCIAL_CREDIT.txt"
+SOCIAL_CREDIT_FILE = r"SOCIAL_CREDIT.txt"
 
 socketio = SocketIO
 app = Flask(__name__)
@@ -42,8 +42,8 @@ class LeaderboardBot():
                     scores.sort(key=lambda x: x[1], reverse=True)
                     
                     # Get top 5 and bottom 5
-                    top_5 = ' @ '.join([f"{username} {score}" for username, score in scores[:5]])
-                    bottom_5 = ' @ '.join([f"{username} {score}" for username, score in scores[-5:]])
+                    top_5 = [f"{username} {score}" for username, score in scores[:5]]
+                    bottom_5 = [f"{username} {score}" for username, score in scores[-5:]]
                     
                     # Emit the leaderboard data
                     socketio.emit('top_5', {'text': top_5})
